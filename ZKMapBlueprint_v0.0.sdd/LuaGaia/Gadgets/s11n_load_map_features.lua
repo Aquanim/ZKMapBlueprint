@@ -11,7 +11,6 @@ end
 
 -- MODIFY THIS TO LOAD FEATURES FROM FILE
 -- e.g.
--- local modelPath = "mapconfig/s11n_model.lua"
 local modelPath = "mapconfig/s11n_model.lua"
 -- DO NOT MODIFY ANYTHING ELSE
 

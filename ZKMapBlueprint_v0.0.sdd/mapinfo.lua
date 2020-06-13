@@ -54,63 +54,61 @@ local mapInfo = {
 		minWind      = 2,
 		maxWind      = 30,
 
-		fogStart     = 0.95,
-		fogEnd       = 1.0,
-		fogColor     = {0.40, 0.45, 0.52},
+		fogStart     = 0.58,
+		fogEnd       = 0.85,
+		fogColor     = {1.0, 0.8, 0.4},
 
-		sunColor     = {1, 1, 1},
+		sunColor     = {1.0, 0.8, 0.0},
 		skycolor     = {0.3, 0.45, 0.9},
 		skyDir       = {0.0, 0.0, -1.0},
 		--skyBox       = "",
 
-		cloudDensity = 0.2,
+		cloudDensity = 0.65,
 		cloudColor   = {1.0, 0.9, 0.7},
-  },
+	},
 
 	lighting = {
 		--// dynsun
 		sunStartAngle = 0.0,
 		sunOrbitTime  = 1440.0,
-		sunDir        = {0.045, 0.195, -0.15, 1e9},
+		sundir        = { -0.5, 0.5, 0.5 },
 
 		--// unit & ground lighting
-		groundAmbientColor  = {0.7, 0.6, 0.7},
-		groundDiffuseColor  = {0.35, 0.35, 0.35},
-		groundSpecularColor = {0.15, 0.15, 0.15},
-		groundShadowDensity = 0.8,
-		unitAmbientColor    = {0.5, 0.5, 0.5},
-		unitDiffuseColor    = {0.7, 0.7, 0.7},
-		unitSpecularColor   = {0.7, 0.7, 0.7},
-		unitShadowDensity   = 0.8,
-		
-		specularExponent    = 10.0,
+         groundambientcolor            = { 0.94, 0.64, 0.74 },
+         grounddiffusecolor            = { 1.0, 0.75, 0.8 },
+         groundshadowdensity           = 0.95,
+         unitambientcolor           = { 0.85, 0.55, 0.65 },
+         unitdiffusecolor           = { 1.0, 0.75, 0.8 },
+         unitshadowdensity          = 0.95,
+		 specularsuncolor           = { 1.0, 0.65, 0.75 },
+		 
+		specularExponent    = 100.0,
 	},
 	
 	water = {
-		damage =  40.0,
+		damage =  0,
 
 		repeatX = 0.0,
 		repeatY = 0.0,
 
-		absorb    = {0.01, 0.01, 0.01},
-		baseColor = {0.75, 0.4, 0.75},
-		minColor  = {0.55, 0.2, 0.55},
+		absorb    = { 0.012, 0.006, 0.0045 },
+		basecolor = { 0.70, 0.9, 1.0 },
+		mincolor  = { 0.02, 0.45, 0.65 },
 
 		ambientFactor  = 1.3,
-		--diffuseFactor  = 1.0,
-		specularFactor = 0.5,
-		specularPower  = 2.0,
+		diffuseFactor  = 1.0,
+		specularFactor = 1.4,
+		specularPower  = 40.0,
 
-		--planeColor = {0.0, 0.0, 0.0},
-
-		surfaceColor  = {0.7, 0.5, 0.7},
-		surfaceAlpha  = 0.001,
-		diffuseColor  = {0.9, 0.5, 0.9},
-		specularColor = {0.9, 0.5, 0.9},
+		surfacecolor  = { 0.6, 0.54, 0.86 },
+		surfaceAlpha  = 0.16,
+		--diffuseColor  = {0.0, 0.0, 0.0},
+		specularColor = {0.5, 0.5, 0.5},
+		planeColor = {0.008, 0.035, 0.00},
 
 		fresnelMin   = 0.3,
-		fresnelMax   = 1.0,
-		fresnelPower = 4.0,
+		fresnelMax   = 0.8,
+		fresnelPower = 8.0,
 
 		reflectionDistortion = 1.0,
 
@@ -124,6 +122,8 @@ local mapInfo = {
 
 		shoreWaves = true,
 		forceRendering = false,
+		
+		hasWaterPlane = false,
 
 		--// undefined == load them from resources.lua!
 		--texture =       "",
